@@ -1,0 +1,218 @@
+/* Clears the formatting for the website */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  body {
+    background-color: #1E1E1D;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  main {
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+
+  /* Text styling */
+  h1, h2, p, a {
+    color: #EDF0F1;
+    text-align: center;
+    float: center;
+  }
+  
+  h1 {
+    line-height: 87.2px;
+    font-size: 1.5em;
+  }
+  
+  p {
+    line-height: 50px;
+    font-size: 1.2em;
+  }
+
+  a {
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    color: #ACACAC;
+  }
+
+  #header {
+    margin-top: 15%;
+    transition: all ease 0.5s;
+  }
+
+  #header.active {
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  /* Search Bar */
+  #search-bar, #search {
+    margin: 5% auto 0 auto;
+    display: block;
+    height: 50px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #141414;
+    background-color: #1C1C1B;
+    transition: all ease 0.5s;
+  }
+
+  #search {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #1C1C1B;
+    border: 1px solid #323230;
+  }
+
+  #search:focus {
+    outline: none;
+  }
+
+  #search.active, #search.active {
+    margin: 0 auto;
+  }
+
+  /* Removes "x" button from search bar
+  Taken from Maxime Rouiller
+  blog post: Remove the X from Internet Explorer and Chrome input type search */
+  input[type=search]::-ms-clear {
+    display: none; width : 0; height: 0;
+  }
+
+  input[type=search]::-ms-reveal {
+    display: none; width : 0; height: 0;
+  }
+  
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
+
+  input {
+    color: #EDF0F1;
+  }
+
+  /* Item-Area */
+  #item-area {
+    display: grid;
+    grid-template-columns: repeat(1);
+    transform: translateY(100px);
+    margin-top: -100px;
+  }
+  
+  .item-icon {
+    position: absolute;
+    width: 80px;
+    height: 87.2px;
+    border-radius: 10px 0px 0px 0px;
+    float: left;
+    box-shadow: 0px -7px 10px -10px #141414;
+  }
+
+  .item-box {
+    width: 500px;
+    height: 87.2px;
+    background-color: #24252A;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px -7px 10px -10px #141414;
+  }
+
+  .item {
+    opacity: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: all ease-in 0.3s;
+  }
+
+  .item.active {
+    opacity: 1;
+  }
+
+  .location-box {
+    margin-top: 5px;
+    width: 500px;
+    height: 50px;
+    background-color: #24252A;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 7px 10px -10px #1C1C1B;
+    outline: none;
+  }
+
+  /* Footer */
+  #footer-content {
+    margin-top: 150px;
+    background-color: #1C1C1B;
+    font-size: 1em;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #footer-content > p {
+    opacity: 0.5;
+  }
+
+  /* Media query for mobile */
+  @media (max-width: 500px) {
+
+    /* Text styling */    
+    h1 {
+      line-height: 58.13px;
+      font-size: 1.2em;
+    }
+    
+    p {
+      line-height: 50px;
+      font-size: 0.9em;
+    }
+
+    #header {
+      margin-top: 50%;
+    }
+    /* Search Bar */
+    #search-bar, #search {
+      margin: 20% auto 0 auto;
+      height: 50px;
+      width: 300px;
+    }
+
+    #search {
+      font-size: 1em;
+    }
+
+    /* Item-Area */
+    #item-area {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item-icon {
+      width: 53.3px;
+      height: 58.13px;
+      border-radius: 10px 0px 0px 0px;
+      float: left;
+      box-shadow: 0px -7px 10px -10px #141414;
+    }
+
+    .item-box {
+      width: 350px;
+      height: 58.13px;
+    }
+
+    .item {
+      margin-top: 50px;
+    }
+
+    .location-box {
+      width: 350px;
+      height: 50px;
+    }
+  }
