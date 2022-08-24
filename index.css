@@ -105,19 +105,18 @@
     display: none;
   }
 
-
   input {
     color: #EDF0F1;
   }
 
   /* Item-Area */
   #item-area {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(1);
     transform: translateY(100px);
     margin-top: -100px;
   }
-  
+
   .item-icon {
     position: absolute;
     width: 80px;
@@ -187,6 +186,7 @@
     #header {
       margin-top: 50%;
     }
+
     /* Search Bar */
     #search-bar, #search {
       margin: 20% auto 0 auto;
@@ -196,6 +196,10 @@
 
     #search {
       font-size: 1em;
+    }
+
+    #search.active, #search.active {
+      margin-top: 50%;
     }
 
     /* Item-Area */

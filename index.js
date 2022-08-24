@@ -21,6 +21,7 @@ searchBar.addEventListener("input", (n) => {
 
         if(itemArr[i].includes(searchValue) && searchValue != "") {
             items[i].style.display = "";
+            itemArea.style.display = "grid";
             setTimeout( () => {items[i].classList.add("active")}, 100);
         } else {
             items[i].classList.remove("active");
