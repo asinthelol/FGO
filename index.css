@@ -16,7 +16,7 @@
   }
 
   /* Text styling */
-  h1, h2, p, a {
+  h1, h2, h3, p, a {
     color: #EDF0F1;
     text-align: center;
     float: center;
@@ -25,6 +25,15 @@
   h1 {
     line-height: 87.2px;
     font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 0.7em;
+    opacity: 0.5;
   }
   
   p {
