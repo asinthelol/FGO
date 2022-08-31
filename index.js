@@ -1,11 +1,13 @@
 // Variables.
-const searchBar = document.getElementById("search");
-const itemArea = document.getElementById("item-area");
-const items = document.querySelectorAll(".item");
-const itemName = document.getElementsByTagName("h1");
 let itemMatch;
 let itemArr = [];
+const searchBar = document.getElementById("search");
+const itemArea = document.getElementById("item-area");
+const items = document.getElementsByClassName("item");
+const itemName = document.getElementsByTagName("h1");
 const fgoHeader = document.getElementById("header");
+const locationBox = document.getElementsByClassName("location-box");
+const phoneMediaQuery = window.matchMedia("(max-width: 500px)");
 
 // Selects all divs with class "item", selects the <h1> tags, and adds their values to the itemArr array.
 for(var i = 0; i < itemName.length; i++) {
@@ -26,6 +28,8 @@ searchBar.addEventListener("input", (n) => {
         } else {
             items[i].classList.remove("active");
             setTimeout( () => {items[i].style.display = "none"}, 300);
+            locationBox[i].classList.remove("active");
+            setTimeout( () => {locationBox[i].style.display = "none"}, 300);
         }
     }
 })
@@ -35,3 +39,15 @@ searchBar.addEventListener("focusin", () => {
     searchBar.classList.add("active");
     fgoHeader.classList.add("active");
 })
+
+for(let i = 0; i < items.length; i++) {
+    items[i].addEventListener("click", () => {
+        if(locationBox[i].parentElement === items[i] && (!(locationBox[i].classList.contains("active")))) {
+            locationBox[i].style.display = "block";
+            setTimeout( () => {locationBox[i].classList.add("active")}, 100);
+        } else {
+            locationBox[i].classList.remove("active");
+            setTimeout( () => {locationBox[i].style.display = "none"}, 300);
+        }
+    })
+}
