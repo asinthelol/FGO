@@ -50,6 +50,7 @@ h3 {
 p {
   line-height: 66.15px;
   font-size: 1.2em;
+  transition: 0.1s;
 }
 
 a {
@@ -149,7 +150,7 @@ input {
   opacity: 0;
   margin: 0 auto;
   margin-top: 50px;
-  transition: all ease-in 0.3s;
+  transition: all ease-in 0.s;
 }
 
 .item.active {
