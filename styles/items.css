@@ -1,0 +1,134 @@
+/* Color variables */
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --darkwhite: rgba(250, 252, 255, 1);
+    --black: rgba(18, 18, 18, 1);
+    --lightblack: rgba(24, 24, 24, 1);
+    --textwhite: rgba(222, 224, 225, 1);
+    --textblack: rgba(35, 37, 38, 1);
+    --blue: rgba(0, 150, 255, 0.8);
+    --lightblue: rgba(0, 150, 255, 0.1);
+    --buttonwhite: rgba(211, 216, 219, 1);
+    --buttonblue: rgba(0, 144, 246, 1);
+  }
+
+/* Clears the formatting for the website */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Changes body background color */
+body {
+    background-color: var(--darkwhite);
+}
+
+/* Container for item area and filter. Using it to put the filter next to 
+the item area on desktop, and above it on mobile */
+#filter-item-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    margin-top: 10em;
+}
+
+#filter-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 1em 3em;
+    margin: 0 10em;
+
+    border-radius: 1em;
+    box-shadow:
+  0px 0px 1px rgba(0, 0, 0, 0.1), 
+  0px 2px 2px rgba(0, 0, 0, 0.1),
+  0px 3px 3px rgba(0, 0, 0, 0.1),
+  0px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+
+/* Filter checkbox */
+input[type="checkbox"].toggle {
+    opacity: 0;
+    position: absolute;
+    left: -10000px;
+}
+
+input[type="checkbox"].toggle + label {
+    display: flex;
+    align-items: center;
+    
+}
+
+input[type="checkbox"].toggle + label::before {
+    width: 5em;
+    height: 2em;
+    margin: 0 1em;
+    
+    content: "";
+
+    border-radius: 1em;
+    background-color: var(--buttonwhite);
+    
+    transition: ease-out 0.2s;
+}
+
+input[type=checkbox].toggle + label::after {
+    position: absolute;
+    left: 4em;
+    width: 2em;
+    height: 2em;
+
+    content: "";
+
+    border-radius: 1em;
+    background-color: var(--darkwhite);
+
+    transition: ease 0.2s;
+}
+
+input[type=checkbox].toggle:checked + label::after {
+    transform: translateX(150%);
+    background-color: var(--buttonblue);
+}
+
+input[type=checkbox].toggle:checked + label::before {
+    background-color: var(--lightblue);
+}
+
+
+
+
+
+/* Centers all elements and makes excess elements go to next row */
+#item-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow-x: auto;
+    width: 50%;
+}
+
+/* Sets overflow to 5 items, changes background color, and changes positioning */
+.item {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    background-color: var(--white);
+    padding: 1em;
+    margin: 2em;
+    border-radius: 1em;
+    box-shadow:
+  0px 0px 1px rgba(0, 0, 0, 0.1), 
+  0px 2px 2px rgba(0, 0, 0, 0.1),
+  0px 3px 3px rgba(0, 0, 0, 0.1),
+  0px 4px 4px rgba(0, 0, 0, 0.1);
+}
