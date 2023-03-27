@@ -16,6 +16,7 @@ const itemBox = document.getElementsByClassName("item-box");
 const phoneMediaQuery = window.matchMedia("(max-width: 500px)");
 const body = document.getElementById("body");
 const textEle = document.getElementsByClassName("text-el");
+const footerContent = document.getElementById("footer-content");
 
 // Selects all divs with class "item", selects the <h1> tags, and adds their values to the itemArr array.
 for(var i = 0; i < itemName.length; i++) {
@@ -81,6 +82,7 @@ darkButton.addEventListener("click", () => {
     for(let i = 0; i < itemBox.length; i++) {itemBox[i].classList.add("darkMode");}
     for(let i = 0; i < itemBox.length; i++) {locationBox[i].classList.add("darkMode");}
     itemButton.classList.add("darkMode");
+    footerContent.classList.add("darkMode");
 })
 
 lightButton.addEventListener("click", () => {
@@ -92,4 +94,5 @@ lightButton.addEventListener("click", () => {
     for(let i = 0; i < itemBox.length; i++) {itemBox[i].classList.remove("darkMode");}
     for(let i = 0; i < itemBox.length; i++) {locationBox[i].classList.remove("darkMode");}
     itemButton.classList.remove("darkMode");
+    footerContent.classList.remove("darkMode");
 })

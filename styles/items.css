@@ -1,3 +1,7 @@
+/* BASE WEBSITE FORMATTING AND VARIABLES BELOW */
+
+
+
 /* Color variables */
 :root {
     --white: rgba(255, 255, 255, 1);
@@ -24,6 +28,17 @@ body {
     background-color: var(--darkwhite);
 }
 
+/* Keeps the footer at the bottom */
+main {
+    min-height: 100vh;
+  }
+
+
+
+/* ITEM FILTER AREA BELOW */
+
+
+
 /* Container for item area and filter. Using it to put the filter next to 
 the item area on desktop, and above it on mobile */
 #filter-item-container {
@@ -41,7 +56,7 @@ the item area on desktop, and above it on mobile */
     align-items: center;
     order: 2;
 
-    width: fit-content;
+    width: 15em;
     height: fit-content;
     padding: 1em 3em;
     margin: 0 10em;
@@ -55,37 +70,50 @@ the item area on desktop, and above it on mobile */
   background-color: var(--white);
 }
 
-/* Filter checkbox */
+
+
+/* FILTER BUTTON BELOW */
+
+
+
+/* Base checkbox input styles */
+input[type="checkbox"] + label {
+    margin: 1em 0;
+}
+
+/* Moves the actual checkbox off the screen */
 input[type="checkbox"].toggle {
     opacity: 0;
     position: absolute;
     left: -10000px;
 }
 
+/* Self explanitory center */
 input[type="checkbox"].toggle + label {
     display: flex;
     align-items: center;
     
 }
 
+/* Create background for slider checkbox */
 input[type="checkbox"].toggle + label::before {
-    width: 5em;
-    height: 2em;
-    margin: 0 1em;
+    width: 75px;
+    height: 30px;
     
     content: "";
 
     border-radius: 1em;
     background-color: var(--buttonwhite);
     
-    transition: ease-out 0.2s;
+    transition: ease 0.2s;
 }
 
-input[type=checkbox].toggle + label::after {
+/* Creates slider on the checkbox */
+input[type="checkbox"].toggle + label::after {
     position: absolute;
-    left: 4em;
-    width: 2em;
-    height: 2em;
+    left: 135px;
+    width: 20px;
+    height: 20px;
 
     content: "";
 
@@ -95,16 +123,19 @@ input[type=checkbox].toggle + label::after {
     transition: ease 0.2s;
 }
 
-input[type=checkbox].toggle:checked + label::after {
-    transform: translateX(150%);
+/* Moves slider when clicked. Moves 45px because  */
+input[type="checkbox"].toggle:checked + label::after {
+    transform: translateX(45px);
+    background-color: var(--darkwhite);
+}
+
+input[type="checkbox"].toggle:checked + label::before {
     background-color: var(--buttonblue);
 }
 
-input[type=checkbox].toggle:checked + label::before {
-    background-color: var(--lightblue);
-}
 
 
+/* ITEM AREA BELOW */
 
 
 
@@ -123,8 +154,10 @@ input[type=checkbox].toggle:checked + label::before {
     justify-content: center;
     flex-grow: 2;
     background-color: var(--white);
+
     padding: 1em;
     margin: 2em;
+
     border-radius: 1em;
     box-shadow:
   0px 0px 1px rgba(0, 0, 0, 0.1), 
@@ -132,3 +165,33 @@ input[type=checkbox].toggle:checked + label::before {
   0px 3px 3px rgba(0, 0, 0, 0.1),
   0px 4px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Makes all item icons the same size */
+.item-icon {
+    width: 90px;
+    height: 90px;
+}
+
+
+
+/* Footer STYLING BELOW */
+
+
+
+/* Base footer styles */
+#footer-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(237, 239, 242, 0.5);
+
+    font-size: 1em;
+    
+    margin-top: 150px;
+  }
+
+  #footer-content > p {
+    opacity: 0.5;
+  }
+  

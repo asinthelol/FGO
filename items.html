@@ -5,92 +5,209 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="\styles\items.css">
-        <link rel="icon" href="images\page-images\favicon.png">
+        <link rel="stylesheet" href="styles/items.css">
+        <link rel="icon" href="images/page-images/favicon.png">
         <title>Items | F/GO Item Locator</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
     </head>
     
     <body>
-        <div id="filter-item-container">
+        <main id="filter-item-container">
 
-            <div id="filter-container">
+            <section id="filter-container">
 
                 <h1>Filter</h1>
+
+                <h2>Hide Bronze Items</h2>
                 <input type="checkbox" id="bronze-check" class="toggle">
-                <label for="bronze-check"></label>
+                <label for="bronze-check" id="bronze-label"></label>
 
+                <h2>Hide Silver Items</h2>
+                <input type="checkbox" id="silver-check" class="toggle">
+                <label for="silver-check" id="silver-label"></label>
+
+                <h2>Hide Gold Items</h2>
+                <input type="checkbox" id="gold-check" class="toggle">
+                <label for="gold-check" id="gold-label"></label>
+
+            </section>
+            <section id="item-container">
+
+                <div id="proof-hero" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/proof-hero.png">
+                </div>
+                <div id="evil-bone" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/evil-bone.png">
+                </div>
+                <div id="dragon-fang" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/dragon-fang.png">
+                </div>
+                <div id="void-dust" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/void-dust.png">
+                </div>
+                <div id="fool-chain" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/fool-chain.png">
+                </div>
+                <div id="deadly-poison-needle" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/deadly-poison-needle.png">
+                </div>
+                <div id="mystic-spinal-fluid" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/mystic-spinal-fluid.png">
+                </div>
+                <div id="stake-wailing-night" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/stake-wailing-night.png">
+                </div>
+                <div id="mystic-gunpowder" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/mystic-gunpowder.png">
+                </div>
+                <div id="small-bell-absolution" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/small-bell-absolution.png">
+                </div>
+                <div id="twilight-ceremonial-blade" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/twilight-ceremonial-blade.png">
+                </div>
+                <div id="unforgettable-ashes" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/unforgettable-ashes.png">
+                </div>
+                <div id="obsidian-edge" class="item bronze-item">
+                    <img class="item-icon" src="images/item-images/obsidian-edge.png">
+                </div>
+                <div id="seed-yggdrasil" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/seed-yggdrasil.png">
+                </div>
+                <div id="ghost-lanturn" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/ghost-lanturn.png">
+                </div>
+                <div id="octuplet-crystal" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/octuplet-crystal.png">
+                </div>
+                <div id="serpent-jewel" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/serpent-jewel.png">
+                </div>
+                <div id="phoenix-feather" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/phoenix-feather.png">
+                </div>
+                <div id="eternal-gear" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/eternal-gear.png">
+                </div>
+                <div id="forbidden-page" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/forbidden-page.png">
+                </div>
+                <div id="homunculus-baby" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/homunculus-baby.png">
+                </div>
+                <div id="meteor-horseshoe" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/meteor-horseshoe.png">
+                </div>
+                <div id="great-knight-medal" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/great-knight-medal.png">
+                </div>
+                <div id="shell-reminiscense" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/shell-reminiscense.png">
+                </div>
+                <div id="refined-magatama" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/refined-magatama.png">
+                </div>
+                <div id="eternal-ice" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/eternal-ice.png">
+                </div>
+                <div id="giant-ring" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/giant-ring.png">
+                </div>
+                <div id="aurora-steel" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/aurora-steel.png">
+                </div>
+                <div id="soundless-bell" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/soundless-bell.png">
+                </div>
+                <div id="arrowhead-malice" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/arrowhead-malice.png">
+                </div>
+                <div id="crown-silvery-light" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/crown-silvery-light.png">
+                </div>
+                <div id="divine-leyline-spiritron" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/divine-leyline-spiritron.png">
+                </div>
+                <div id="ball-rainbow-thread" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/ball-rainbow-thread.png">
+                </div>
+                <div id="scales-fantasy" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/scales-fantasy.png">
+                </div>
+                <div id="sunscale" class="item silver-item">
+                    <img class="item-icon" src="images/item-images/sunscale.png">
+                </div>
+                <div id="claw-chaos" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/claw-chaos.png">
+                </div>
+                <div id="heart-foreign-god" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/heart-foreign-god.png">
+                </div>
+                <div id="dragon-reverse-scale" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/dragon-reverse-scale.png">
+                </div>
+                <div id="spirit-root" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/spirit-root.png">
+                </div>
+                <div id="warhorse-young-horn" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/warhorse-young-horn.png">
+                </div>
+                <div id="tearstone-blood" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/tearstone-blood.png">
+                </div>
+                <div id="black-beast-grease" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/black-beast-grease.png">
+                </div>
+                <div id="lamp-evil-sealing" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/lamp-evil-sealing.png">
+                </div>
+                <div id="scarab-wisdom" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/scarab-wisdom.png">
+                </div>
+                <div id="primordial-lanugo" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/primordial-lanugo.png">
+                </div>
+                <div id="cursed-beast-gallstone" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/cursed-beast-gallstone.png">
+                </div>
+                <div id="mysterious-divine-wine" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/mysterious-divine-wine.png">
+                </div>
+                <div id="reactor-core-dawn" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/reactor-core-dawn.png">
+                </div>
+                <div id="tsukumo-mirror" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/tsukumo-mirror.png">
+                </div>
+                <div id="egg-truth" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/egg-truth.png">
+                </div>
+                <div id="fragment-twinkling-star" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/fragment-twinkling-star.png">
+                </div>
+                <div id="fruit-eternity" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/fruit-eternity.png">
+                </div>
+                <div id="flaming-oni-lanturn-plant" class="item gold-item">
+                    <img class="item-icon" src="images/item-images/flaming-oni-lanturn-plant.png">
+                </div>
+
+            </section>
+
+        </main>
+        <footer>
+            <div id="footer-content">
+                <p class="text-el">&copy; 2022 Zelp.</p>
             </div>
-            <div id="item-container">
-
-                <div id="proof-hero" class="item">
-                    <img class="item-icon" src="images\item-images\proof-hero.png">
-                </div>
-                <div id="evil-bone" class="item">
-                    <img class="item-icon" src="images\item-images\evil-bone.png">
-                </div>
-                <div id="dragon-fang" class="item">
-                    <img class="item-icon" src="images\item-images\dragon-fang.png">
-                </div>
-                <div id="void-dust" class="item">
-                    <img class="item-icon" src="images\item-images\void-dust.png">
-                </div>
-                <div id="fool-chain" class="item">
-                    <img class="item-icon" src="images\item-images\fool-chain.png">
-                </div>
-                <div id="deadly-poison-needle" class="item">
-                    <img class="item-icon" src="images\item-images\deadly-poison-needle.png">
-                </div>
-                <div id="mystic-spinal-fluid" class="item">
-                    <img class="item-icon" src="images\item-images\mystic-spinal-fluid.png">
-                </div>
-                <div id="stake-wailing-night" class="item">
-                    <img class="item-icon" src="images\item-images\stake-wailing-night.png">
-                </div>
-                <div id="mystic-gunpowder" class="item">
-                    <img class="item-icon" src="images\item-images\mystic-gunpowder.png">
-                </div>
-                <div id="small-bell-absolution" class="item">
-                    <img class="item-icon" src="images\item-images\small-bell-absolution.png">
-                </div>
-                <div id="twilight-ceremonial-blade" class="item">
-                    <img class="item-icon" src="images\item-images\twilight-ceremonial-blade.png">
-                </div>
-                <div id="unforgettable-ashes" class="item">
-                    <img class="item-icon" src="images\item-images\unforgettable-ashes.png">
-                </div>
-                <div id="obsidian-edge" class="item">
-                    <img class="item-icon" src="images\item-images\obsidian-edge.png">
-                </div>
-                <div id="seed-yggdrasil" class="item">
-                    <img class="item-icon" src="images\item-images\seed-yggdrasil.png">
-                </div>
-                <div id="ghost-lanturn" class="item">
-                    <img class="item-icon" src="images\item-images\ghost-lanturn.png">
-                </div>
-                <div id="octuplet-crystal" class="item">
-                    <img class="item-icon" src="images\item-images\octuplet-crystal.png">
-                </div>
-                <div id="serpent-jewel" class="item">
-                    <img class="item-icon" src="images\item-images\serpent-jewel.png">
-                </div>
-                <div id="phoenix-feather" class="item">
-                    <img class="item-icon" src="images\item-images\phoenix-feather.png">
-                </div>
-                <div id="eternal-gear" class="item">
-                    <img class="item-icon" src="images\item-images\eternal-gear.png">
-                </div>
-                <div id="forbidden-page" class="item">
-                    <img class="item-icon" src="images\item-images\forbidden-page.png">
-                </div>
-                
-
-            </div>
-
-        </div>
+            <script src="/scripts/items.js"></script>
+        </footer>
 
     </body>
 </html>
