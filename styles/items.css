@@ -25,6 +25,8 @@
 
 /* Changes body background color */
 body {
+    font-family: 'Public Sans', 'Sans-Serif';
+
     background-color: var(--darkwhite);
 }
 
@@ -36,18 +38,54 @@ body {
 
 #header-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    /* background-color: var(--lightblue); */
+    justify-content: space-between;
 
     height: 10em;
+    padding: 0 2em;
     margin-bottom: 2em;
+}
+
+#header-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fgo-icon {
+    width: 64px;
+    height: 64px;
+}
+
+/* Base styles for navbar */
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5em;
+}
+
+#navbar > ul {
+    list-style-type: none;
+    
+    font-size: 1.25em;
+}
+
+ul > li {
+    padding-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textblack);
 }
 
 /* Base styles for search bar */
 #search-bar-container {
     display: flex;
     justify-content: center;
+
+    margin-top: 15em;
 }
 
 #search {
@@ -57,7 +95,6 @@ body {
     
     text-align: center;
     font-size: 1.5em;
-    font-family: 'Poppins', 'sans-serif';
     
     outline: none;
     border-bottom: thin var(--black) solid;
@@ -72,10 +109,10 @@ input[type=search]::-ms-clear
 }
 
 /* Webkit browsers */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
     display: none;
 }
 
@@ -92,9 +129,9 @@ main {
 the item area on desktop, and above it on mobile */
 #filter-item-container {
     display: flex;
-    flex-flow: row nowrap;
-    overflow: auto;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     margin-top: 10em;
 }
@@ -103,16 +140,16 @@ the item area on desktop, and above it on mobile */
 #filter-container {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    order: 2;
+    justify-content: center;
+    column-gap: 1em;
 
-    width: 15em;
+    width: 20%;
     height: fit-content;
-    padding: 1em 3em;
-    margin-left: 10em;
+    padding: 1em 2em;
+    margin-bottom: 5em;
 
-    border-radius: 1em;
     box-shadow:
   0px 0px 1px rgba(0, 0, 0, 0.1), 
   0px 2px 2px rgba(0, 0, 0, 0.1),
@@ -127,63 +164,26 @@ the item area on desktop, and above it on mobile */
 
 
 
-/* Base checkbox input styles */
-input[type="checkbox"] + label {
-    margin: 1em 0;
-}
-
-/* Moves the actual checkbox off the screen */
-input[type="checkbox"].toggle {
-    opacity: 0;
-    position: absolute;
-    left: -10000px;
-}
-
-/* Self explanitory center */
-input[type="checkbox"].toggle + label {
-    display: flex;
+.filter-button {
+    display: inherit;
+    justify-content: space-around;
     align-items: center;
+    flex-basis: 33%;
     
-}
+    padding: 0.5em 1em;
 
-/* Create background for slider checkbox */
-input[type="checkbox"].toggle + label::before {
-    width: 75px;
-    height: 30px;
+    font-weight: bolder;
+
+    color: var(--white);
+    background-color: var(--blue);
     
-    content: "";
-
-    border-radius: 1em;
-    background-color: var(--buttonwhite);
-    
-    transition: ease 0.2s;
+    transition: 0.25s ease;
+    user-select: none;
 }
 
-/* Creates slider on the checkbox */
-input[type="checkbox"].toggle + label::after {
-    position: absolute;
-    left: 135px;
-    width: 20px;
-    height: 20px;
-
-    content: "";
-
-    border-radius: 1em;
-    background-color: var(--darkwhite);
-
-    transition: ease 0.2s;
-}
-
-/* Moves slider when clicked. Moves 45px because  */
-input[type="checkbox"].toggle:checked + label::after {
-    transform: translateX(45px);
-    background-color: var(--darkwhite);
-}
-
-input[type="checkbox"].toggle:checked + label::before {
+.filter-button:hover {
     background-color: var(--buttonblue);
 }
-
 
 
 /* ITEM AREA BELOW */
@@ -193,13 +193,11 @@ input[type="checkbox"].toggle:checked + label::before {
 /* Centers all elements and makes excess elements go to next row */
 #item-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     overflow: auto;
-
-
+    
     width: 50%;
-    height: fit-content;
 }
 
 /* Sets overflow to 5 items, changes background color, and changes positioning */
@@ -208,15 +206,15 @@ input[type="checkbox"].toggle:checked + label::before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 1 0 10%;
+    flex-basis: 12%;
     background-color: var(--white);
 
     padding: 1em;
-    margin: 1em;
-    width: fit-content;
-    height: fit-content;
+    margin: 0.5em;
 
-    border-radius: 1em;
+    height: 12em;
+
+    /* border-radius: 1em; */
     box-shadow:
   0px 0px 1px rgba(0, 0, 0, 0.1), 
   0px 2px 2px rgba(0, 0, 0, 0.1),
@@ -228,14 +226,19 @@ input[type="checkbox"].toggle:checked + label::before {
 .item-icon {
     width: 90px;
     height: 90px;
+    margin-bottom: 1em;
 }
 
-.item > p {
+.item > span {
     text-align: center;
+    font-size: 1em;
+
+    margin-top: 1em;
+    
 }
 
-/* Base styles for item rarity icons (Gold, Silver, and Bronze (Copper) */
-.item-rarity-icon {
+/* Base styles for item rarity icons (Gold, Silver, and Bronze) */
+.item-rarity-icon { 
     max-width: 32px;
     max-width: 32px;
 }
@@ -249,12 +252,13 @@ input[type="checkbox"].toggle:checked + label::before {
     display: flex;
     justify-content: center;
     width: 100%;
-    bottom: 0;
+    padding: 2em 0;
+
     background-color: rgba(237, 239, 242, 0.5);
 
     font-size: 1em;
     
-    margin-top: 150px;
+    margin-top: 7em;
   }
 
   #footer-content > p {

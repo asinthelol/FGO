@@ -9,27 +9,59 @@
   If it is not, then turn it on and hide the items
   If it is, then turn it off and show the items
 */
-$("#bronze-label").click(function() {
-    if(!($("#bronze-check").is(":checked"))) {
-        $(".bronze-item").hide();
-    } else {
-        $(".bronze-item").show();
-    }
-});
 
-//Repeating code above for silver and gold items
-$("#silver-label").click(function() {
-    if(!($("#silver-check").is(":checked"))) {
-        $(".silver-item").hide();
-    } else {
-        $(".silver-item").show();
-    }
-});
+// function toggleItems(checkbox, itemRarity) {
+//     if (!$(checkbox).is(":checked")) {
+//         $(itemRarity).hide();
+//     } else {
+//         $(itemRarity).show();
+//     }
+// }
 
-$("#gold-label").click(function() {
-    if(!($("#gold-check").is(":checked"))) {
-        $(".gold-item").hide();
+function toggleItems(button, itemClass) {
+    if ($(itemClass).is(":visible")) {
+        $(itemClass).hide();
+        $(button).css({
+            "background-color": "var(--darkwhite)",
+            "color": "var(--textblack)",
+            "border": "thin solid var(--black)"});
     } else {
-        $(".gold-item").show();
+        $(itemClass).show();
+        $(button).css({
+            "background-color": "var(--blue)",
+            "color": "var(--white)",
+            "border": "none"});
     }
-});
+}
+
+$("#bronze-button").click(function () {
+    toggleItems($(this), ".bronze-item");
+})
+
+$("#silver-button").click(function () {
+    toggleItems($(this), ".silver-item");
+})
+
+$("#gold-button").click(function () {
+    toggleItems($(this), ".gold-item");
+})
+
+async function getItems() {
+    try {
+      let response = await fetch("json/items.json");
+      
+      if(response.ok) {
+        console.log("good");
+        let items = await response.json();
+        for (let item of items) {
+            console.log(item.name);
+          }
+        
+      }
+
+    } catch(err) { // Just in case I make a mistake in the JSON file
+      console.log(err);
+    }
+  }
+  
+  getItems();
