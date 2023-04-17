@@ -1,5 +1,5 @@
 // Const Variables
-const itemContainer = $('#item-container');
+const itemArea = $('#item-area');
 
 
 
@@ -12,15 +12,11 @@ function toggleItems(button, itemClass) {
     if ($(itemClass).is(":visible")) {
         $(itemClass).hide();
         $(button).css({
-            "background-color": "var(--darkwhite)",
-            "color": "var(--textblack)",
-            "border": "thin solid var(--black)"});
+            "background-color": "var(--lightBlack)",
+            "border": "thin solid var(--white)"});
     } else {
         $(itemClass).show();
-        $(button).css({
-            "background-color": "var(--blue)",
-            "color": "var(--white)",
-            "border": "none"});
+        $(button).removeAttr("style");
     }
 }
 
@@ -47,7 +43,7 @@ async function getItems(items) {
           `<img class="item-icon" src="${item.imgSrc}">
           <span>${item.name}</span>
           <img class="item-rarity-icon" src=${item.raritySrc}>`);
-          itemContainer.append(newDiv);
+          itemArea.append(newDiv);
         }
       }
 

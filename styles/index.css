@@ -8,8 +8,8 @@
   --black: rgba(18, 18, 18, 1);
   --opacBlack: rgba(18, 18, 18, 0.5); /* opac - opacity */
   --lightBlack: rgba(24, 24, 24, 0.95);
-  --lightBlue: rgba(29, 156, 246, 1);
   --blue: rgba(6, 130, 219, 1);
+  --lightBlue: rgba(29, 156, 246, 1);
 }
 
 /* Clears the formatting for the website */
@@ -19,12 +19,13 @@
   border: 0;
 }
 
-/* Changes body background color */
 body {
   font-family: 'Inter', 'Sans-Serif';
   text-align: center;
   font-size: 16px; /* 1em = 16px */
   color: var(--white);
+
+  background-color: var(--black);
 }
 
 .large-text {
@@ -42,29 +43,6 @@ body {
   height: 1.5em;
 }
 
-.button {
-  all: unset;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-size: 1.125em;
-  font-weight: bold;
-
-  padding: 1em;
-  width: 7em;
-  
-  border-radius: 0.5em;
-
-  background-color: var(--lightBlue);
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background-color: var(--blue);
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -76,7 +54,6 @@ a {
 
 
 
-/* Keeps footer at the bottom */
 #container {
   display: flex;
   flex-direction: column;
@@ -152,7 +129,37 @@ a {
 
 
 
-/* Footer STYLING BELOW */
+/* BUTTON AREA BELOW */
+
+.button {
+  all: unset;
+  
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.125em; /* 18px */
+  font-weight: bold;
+
+  padding: 1em;
+  width: 7em;
+  
+  border-radius: 0.5em;
+
+  background-color: var(--lightBlue);
+
+  transition: background-color 0.2s ease;
+
+  user-select: none;
+}
+
+.button:hover {
+  background-color: var(--blue);
+}
+
+
+
+/* FOOTER STYLING BELOW */
 
 
 
@@ -164,7 +171,7 @@ a {
 
   font-size: 1em;
 
-  background-color: var(--black);
+  background-color: var(--lightBlack);
 }
 
 #footer-content > p {

@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/page-images/grand-order-icon.png">
-        <title>Items - Grand Order Wiki</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/page-images/grand-order-icon.png">
+    <title>Items - Grand Order Wiki</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet"> <!-- Poppins -->
-        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap" rel="stylesheet"> <!-- Public Sans -->
-        
-        <!-- CSS -->
-        <link rel="stylesheet" href="styles/items.css">
-
-        <!-- JQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous">
-        </script>
-    </head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
-    <body>
-        <header id="header-container">
-            <div>
-                <a href="index.html"><img id='fgo-icon' src='/images/page-images/grand-order-icon.png'></a>
-            </div>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="items.html">Items</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="filter-item-container">
-            
-            <section id="filter-container">
-                <div id="bronze-button" class="filter-button visible">Bronze</div>
-                <div id="silver-button" class="filter-button visible">Silver</div>
-                <div id="gold-button" class="filter-button visible">Gold</div>
-            </section>
-            <section id="item-container"></section>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/items.css">
 
-        </main>
-        <footer>
-            <div id="footer-content">
-                Copyright &copy; 2023 Asinthe
-            </div>
-            <script src="scripts/items.js"></script>
-        </footer>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous">
+    </script>
+  </head>
+  
+  <body>
 
-    </body>
+    <header id="header-container">
+      <nav id="navbar">
+        <ul>
+          <li><a href="items.html">ITEMS</a></li>
+          <li class="no-hover"><a href="index.html"><img id='fgo-icon' src='images/page-images/grand-order-icon.png'></a></li>
+          <li><a href="#">SERVANTS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="container"> 
+      <section id="button-area">
+        <button id="bronze-button" class="button">Bronze</button>
+        <button id="silver-button" class="button">Silver</button>
+        <button id="gold-button" class="button">Gold</button>
+      </section>
+      <section id="item-area"><!-- Will be filled using javascript --></section>
+    </main>
+
+    <footer id="footer-content">
+      <p>Copyright &copy; 2023 Asinthe</p>
+      <script src="scripts/items.js"></script>
+    </footer>
+
+  </body>
 </html>
-

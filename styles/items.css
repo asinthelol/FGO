@@ -1,162 +1,157 @@
-/* BASE WEBSITE FORMATTING AND VARIABLES BELOW */
+/* BASE WEBSITE FORMATTING AND VARIABLES (and some classes/ids) BELOW */
 
 
 
 /* Color variables */
 :root {
-    --white: rgba(255, 255, 255, 1);
-    --darkwhite: rgba(250, 252, 255, 1);
-    --black: rgba(18, 18, 18, 1);
-    --lightblack: rgba(24, 24, 24, 1);
-    --textwhite: rgba(222, 224, 225, 1);
-    --textblack: rgba(35, 37, 38, 1);
-    --blue: rgba(0, 150, 255, 0.8);
-    --lightblue: rgba(0, 150, 255, 0.05);
-    --buttonwhite: rgba(211, 216, 219, 1);
-    --buttonblue: rgba(0, 144, 246, 1);
+  --white: rgba(255, 255, 255, 1);
+  --black: rgba(18, 18, 18, 1);
+  --opacBlack: rgba(18, 18, 18, 0.5); /* opac - opacity */
+  --lightblack: rgba(24, 24, 24, 0.95);
+  --lighterblack: rgba(35, 37, 38, 1);
+  --blue: rgba(6, 130, 219, 1);
+  --lightBlue: rgba(29, 156, 246, 1);
   }
 
 /* Clears the formatting for the website */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* Changes body background color */
 body {
-    font-family: 'Public Sans', 'Sans-Serif';
+  color: var(--white);
+  font-family: 'Inter', 'Sans-serif';
+  font-size: 16px;
 
-    background-color: var(--darkwhite);
+  background-color: var(--black);
     
 }
 
+.no-hover, .no-hover:hover {
+  border-bottom: none;
+}
+
+#fgo-icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 
-/* HEADER AND SEARCH CONTAINER AREA BELOW */
+
+/* HEADER AREA BELOW */
 
 
 
 #header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 10em;
-    padding: 0 2em;
-    margin-bottom: 12em;
+  max-height: fit-content;
+  padding: 1em 0;
 }
 
-#header-container > div {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-}
-
-#fgo-icon {
-    width: 64px;
-    height: 64px;
-}
-
-/* Base styles for navbar */
 #navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5em;
+  display: inherit;
+  justify-content: center;
+  align-items: center; 
 }
 
 #navbar > ul {
-    list-style-type: none;
-    
-    font-size: 1.25em;
+  display: inherit;
+  align-items: center;
+  column-gap: 3em;
+  
+  list-style-type: none;
 }
 
 ul > li {
-    padding-bottom: 1em;
-    border-bottom: thin solid transparent;
+  font-size: 0.8em;
+  
+  border-bottom: thin solid transparent;
 
-    transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
 ul > li:hover {
-    border-bottom: thin solid var(--black);
-}
-
-a {
-    text-decoration: none;
-    color: var(--textblack);
+  border-bottom: thin solid var(--white);
 }
 
 
 
-/* ITEM FILTER AREA BELOW */
+/* MAIN AREA BELOW */
 
-/* Keeps footer at the bottom */
-main {
-    min-height: 100vh;
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 5em 0;
+
+  background-color: var(--lightblack);
 }
 
-/* Container for item area and filter. Using it to put the filter next to 
-the item area on desktop, and above it on mobile */
-#filter-item-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-/* Base styles for filter container */
-#filter-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
-    column-gap: 1em;
 
-    width: 20em;
-    height: 2em;
-    padding: 1em 2em;
-    margin-bottom: 5em;
 
-    box-shadow:
+
+/* BUTTON AREA BELOW */
+
+
+
+#button-area {
+  display: inherit;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 1.5em;
+
+  width: 25em;
+  height: 2em;
+  padding: 1em 2em;
+  margin-bottom: 5em;
+
+  box-shadow:
   0px 0px 1px rgba(0, 0, 0, 0.1), 
   0px 2px 2px rgba(0, 0, 0, 0.1),
   0px 3px 3px rgba(0, 0, 0, 0.1),
   0px 4px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--white);
+
+  background-color: var(--lighterblack);
 }
 
+.button {
+  all: unset;
 
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 30%;
+  
+  padding: 0.5em 1em;
 
-/* FILTER BUTTON BELOW */
+  background-color: var(--lightBlue);
+  
+  box-sizing: border-box;
 
-
-
-.filter-button {
-    display: inherit;
-    justify-content: space-around;
-    align-items: center;
-
-    flex: 0 0 33%;
-    
-    padding: 0.5em 1em;
-
-    font-weight: bolder;
-
-    color: var(--white);
-    background-color: var(--blue);
-    
-    transition: 0.25s ease;
-    user-select: none;
-
-    box-sizing: border-box;
+  transition: 0.2s ease;
 }
 
-.filter-button:hover {
-    background-color: var(--buttonblue);
+.button:hover {
+  background-color: var(--blue);
 }
 
 
@@ -165,77 +160,72 @@ the item area on desktop, and above it on mobile */
 
 
 /* Centers all elements and makes excess elements go to next row */
-#item-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: auto;
-    
-    width: 50%;
+#item-area {
+  display: inherit;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  
+  width: 50%;
 }
 
 /* changes background color, and changes positioning */
 .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-basis: 12%;
-    background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 12%;
+  background-color: var(--lighterblack);
 
-    padding: 1em;
-    margin: 0.5em;
+  padding: 1em;
+  height: 14em;
 
-    height: 12em;
-
-    /* border-radius: 1em; */
-    box-shadow:
+  box-shadow:
   0px 0px 1px rgba(0, 0, 0, 0.1), 
   0px 2px 2px rgba(0, 0, 0, 0.1),
   0px 3px 3px rgba(0, 0, 0, 0.1),
   0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Makes all item icons the same size */
+.item > element {
+  flex-basis: 33%;
+}
+
 .item-icon {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 1em;
+  width: 90px;
+  height: 90px;
 }
 
 .item > span {
-    text-align: center;
-    font-size: 1em;
+  display: inherit;
+  align-items: center;
+  flex-basis: 30%;
 
-    margin-top: 1em;
-    
+  text-align: center;
+  font-size: 0.875em;    
 }
 
-/* Base styles for item rarity icons (Gold, Silver, and Bronze) */
-.item-rarity-icon { 
-    max-width: 32px;
-    max-width: 32px;
+.item-rarity-icon {
+  max-width: 32px;
+  max-width: 32px;
 }
 
 /* Footer STYLING BELOW */
 
 
 
-/* Base footer styles */
 #footer-content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1em 0;
 
-    background-color: rgba(237, 239, 242, 0.5);
+  font-size: 1em;
 
-    font-size: 1em;
-    
-    margin-top: 7em;
-  }
+  background-color: var(--lightBlack);
+}
 
-  #footer-content > p {
-    opacity: 0.5;
-  }
-  
+#footer-content > p {
+  opacity: 0.7;
+}
