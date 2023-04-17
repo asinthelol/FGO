@@ -1,23 +1,13 @@
+// Const Variables
+const itemContainer = $('#item-container');
+
+
+
 // SLIDER CHECKBOX AREA
 
 
 
-/*
-  Show and hide items:
-  When the user clicks on The slider checkbox
-  Checks if the slider is already on
-  If it is not, then turn it on and hide the items
-  If it is, then turn it off and show the items
-*/
-
-// function toggleItems(checkbox, itemRarity) {
-//     if (!$(checkbox).is(":checked")) {
-//         $(itemRarity).hide();
-//     } else {
-//         $(itemRarity).show();
-//     }
-// }
-
+// When the user clicks on a rarity button, the items with that rarity will show or hide.
 function toggleItems(button, itemClass) {
     if ($(itemClass).is(":visible")) {
         $(itemClass).hide();
@@ -34,32 +24,34 @@ function toggleItems(button, itemClass) {
     }
 }
 
-$("#bronze-button").click(function () {
-    toggleItems($(this), ".bronze-item");
-})
+$("#bronze-button").click(function () {toggleItems($(this), ".bronze-item");});
+$("#silver-button").click(function () {toggleItems($(this), ".silver-item");});
+$("#gold-button").click(function () {toggleItems($(this), ".gold-item");});
 
-$("#silver-button").click(function () {
-    toggleItems($(this), ".silver-item");
-})
 
-$("#gold-button").click(function () {
-    toggleItems($(this), ".gold-item");
-})
 
-async function getItems() {
+// ADDING ITEM DIVS AREA
+
+
+
+// Reads items.json (contains item names, rarity, rareity img src, and img src) and adds them to an array.
+let items = [];
+async function getItems(items) {
     try {
-      let response = await fetch("json/items.json");
-      
+      let response = await fetch("json/items/items.json");
       if(response.ok) {
-        console.log("good");
-        let items = await response.json();
+        items = await response.json();
         for (let item of items) {
-            console.log(item.name);
-          }
-        
+          let newDiv = $('<div>').addClass(`item ${item.rarity}`);
+          newDiv.append(
+          `<img class="item-icon" src="${item.imgSrc}">
+          <span>${item.name}</span>
+          <img class="item-rarity-icon" src=${item.raritySrc}>`);
+          itemContainer.append(newDiv);
+        }
       }
 
-    } catch(err) { // Just in case I make a mistake in the JSON file
+    } catch(err) {
       console.log(err);
     }
   }

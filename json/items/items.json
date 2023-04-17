@@ -1,0 +1,318 @@
+[{
+    "name": "Proof of Hero",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/proof-hero.png"
+},
+{
+    "name": "Evil Bone",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/evil-bone.png"
+},
+{
+    "name": "Dragon Fang",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/dragon-fang.png"
+},
+{
+    "name": "Void Dust",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/void-dust.png"
+},
+{
+    "name": "Fool's Chain",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/fool-chain.png"
+},
+{
+    "name": "Deadly Poisonous Needle",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/deadly-poison-needle.png"
+},
+{
+    "name": "Mystic Spinal Fluid",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/mystic-spinal-fluid.png"
+},
+{
+    "name": "Stake of Wailing Night",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/stake-wailing-night.png"
+},
+{
+    "name": "Mystic Gunpowder",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/mystic-gunpowder.png"
+},
+{
+    "name": "Small Bell of Absolution",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/small-bell-absolution.png"
+},
+{
+    "name": "Twilight Ceremonial Blade",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/twilight-ceremonial-blade.png"
+},
+{
+    "name": "Unforgettable Ashes",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/unforgettable-ashes.png"
+},
+{
+    "name": "Obsidian Edge",
+    "rarity": "bronze-item",
+    "raritySrc": "images/item-images/item-rarity-images/bronze.png",
+    "imgSrc": "images/item-images/obsidian-edge.png"
+},
+{
+    "name": "Seed of Yggdrasil",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/seed-yggdrasil.png"
+},
+{
+    "name": "Ghost Lanturn",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/ghost-lanturn.png"
+},
+{
+    "name": "Octuplet crystal",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/octuplet-crystal.png"
+},
+{
+    "name": "Serpent Jewel",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/serpent-jewel.png"
+},
+{
+    "name": "Phoenix Feather",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/phoenix-feather.png"
+},
+{
+    "name": "Eternal Gear",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/eternal-gear.png"
+},
+{
+    "name": "Forbidden Page",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/forbidden-page.png"
+},
+{
+    "name": "Homunculus Baby",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/homunculus-baby.png"
+},
+{
+    "name": "Meteor Horseshoe",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/meteor-horseshoe.png"
+},
+{
+    "name": "Great Knight Medal",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/great-knight-medal.png"
+},
+{
+    "name": "Shell of Reminiscense",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/shell-reminiscense.png"
+},
+{
+    "name": "Refined Magatama",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/refined-magatama.png"
+},
+{
+    "name": "Eternal Ice",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/eternal-ice.png"
+},
+{
+    "name": "Giant's Ring",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/giant-ring.png"
+},
+{
+    "name": "Aurora Steel",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/aurora-steel.png"
+},
+{
+    "name": "Soundless Bell",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/soundless-bell.png"
+},
+{
+    "name": "Arrowhead of Malice",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/arrowhead-malice.png"
+},
+{
+    "name": "Crown of Silvery Light",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/crown-silvery-light.png"
+},
+{
+    "name": "Divine Leyline Spiritron",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/divine-leyline-spiritron.png"
+},
+{
+    "name": "Ball of Rainbow Thread",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/ball-rainbow-thread.png"
+},
+{
+    "name": "Scales of Fantasy",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/scales-fantasy.png"
+},
+{
+    "name": "Sunscale",
+    "rarity": "silver-item",
+    "raritySrc": "images/item-images/item-rarity-images/silver.png",
+    "imgSrc": "images/item-images/sunscale.png"
+},
+{
+    "name": "Claw of Chaos",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/claw-chaos.png"
+},
+{
+    "name": "Heart of the Foreign God",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/heart-foreign-god.png"
+},
+{
+    "name": "Dragon's Reverse Scale",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/dragon-reverse-scale.png"
+},
+{
+    "name": "Spirit Root",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/spirit-root.png"
+},
+{
+    "name": "Warhorse's Young Horn",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/warhorse-young-horn.png"
+},
+{
+    "name": "Tearstone of Blood",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc":  "images/item-images/tearstone-blood.png"
+},
+{
+    "name": "Black Beast Grease",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/black-beast-grease.png"
+},
+{
+    "name": "Lamp of Evil Sealing",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/lamp-evil-sealing.png"
+},
+{
+    "name": "Scarab of Wisdom",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/scarab-wisdom.png"
+},
+{
+    "name": "Primordial Lanugo",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/primordial-lanugo.png"
+},
+{
+    "name": "Cursed Beast Gallstone",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/cursed-beast-gallstone.png"
+},
+{
+    "name": "Mysterious Divine Wine",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/mysterious-divine-wine.png"
+},
+{
+    "name": "Reactor Core of Dawn",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/reactor-core-dawn.png"
+},
+{
+    "name": "Tsukumo Mirror",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/tsukumo-mirror.png"
+},
+{
+    "name": "Egg of Truth",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/egg-truth.png"
+},
+{
+    "name": "Fragment of a Twinkling Star",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/fragment-twinkling-star.png"
+},
+{
+    "name": "Fruit of Eternity",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/fruit-eternity.png"
+},
+{
+    "name": "Flaming Oni lanturn Plant",
+    "rarity": "gold-item",
+    "raritySrc": "images/item-images/item-rarity-images/gold.png",
+    "imgSrc": "images/item-images/flaming-oni-lanturn-plant.png"
+}]

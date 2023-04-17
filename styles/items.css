@@ -28,6 +28,7 @@ body {
     font-family: 'Public Sans', 'Sans-Serif';
 
     background-color: var(--darkwhite);
+    
 }
 
 
@@ -43,11 +44,11 @@ body {
 
     height: 10em;
     padding: 0 2em;
-    margin-bottom: 2em;
+    margin-bottom: 12em;
 }
 
 #header-container > div {
-    display: flex;
+    display: inherit;
     justify-content: center;
     align-items: center;
 }
@@ -73,47 +74,18 @@ body {
 
 ul > li {
     padding-bottom: 1em;
+    border-bottom: thin solid transparent;
+
+    transition: all ease 0.2s;
+}
+
+ul > li:hover {
+    border-bottom: thin solid var(--black);
 }
 
 a {
     text-decoration: none;
     color: var(--textblack);
-}
-
-/* Base styles for search bar */
-#search-bar-container {
-    display: flex;
-    justify-content: center;
-
-    margin-top: 15em;
-}
-
-#search {
-    height: 2em;
-    width: 20em;
-    background: transparent;
-    
-    text-align: center;
-    font-size: 1.5em;
-    
-    outline: none;
-    border-bottom: thin var(--black) solid;
-  }
-
-/* Removes border and x button from search input */
-
-/* IE/Edge */
-input[type=search]::-ms-clear
- { 
-    display: none;
-}
-
-/* Webkit browsers */
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
-    display: none;
 }
 
 
@@ -130,10 +102,8 @@ the item area on desktop, and above it on mobile */
 #filter-item-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-
-    margin-top: 10em;
 }
 
 /* Base styles for filter container */
@@ -143,10 +113,11 @@ the item area on desktop, and above it on mobile */
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     column-gap: 1em;
 
-    width: 20%;
-    height: fit-content;
+    width: 20em;
+    height: 2em;
     padding: 1em 2em;
     margin-bottom: 5em;
 
@@ -168,7 +139,8 @@ the item area on desktop, and above it on mobile */
     display: inherit;
     justify-content: space-around;
     align-items: center;
-    flex-basis: 33%;
+
+    flex: 0 0 33%;
     
     padding: 0.5em 1em;
 
@@ -179,6 +151,8 @@ the item area on desktop, and above it on mobile */
     
     transition: 0.25s ease;
     user-select: none;
+
+    box-sizing: border-box;
 }
 
 .filter-button:hover {
@@ -200,7 +174,7 @@ the item area on desktop, and above it on mobile */
     width: 50%;
 }
 
-/* Sets overflow to 5 items, changes background color, and changes positioning */
+/* changes background color, and changes positioning */
 .item {
     display: flex;
     justify-content: center;
